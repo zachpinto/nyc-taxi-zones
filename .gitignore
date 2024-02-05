@@ -5,3 +5,7 @@
 /data/raw/2022.csv
 /.env
 ```
+# ignore everything in reports
+/reports/*
+/reports/*
+```
