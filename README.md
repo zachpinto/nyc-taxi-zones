@@ -1,5 +1,7 @@
 # NYC Taxi Zones Visualization
 
+DEMO: https://zachpinto.com/projects/visualizations/nyc_taxi_video.mp4
+
 ## Overview
 This project visualizes the volume of taxi trips in New York City taxi zones by week from 2018 to 2022. 
 
