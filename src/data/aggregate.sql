@@ -20,4 +20,4 @@ ORDER BY
   "PULocationID";
 
 
-COPY weekly_zone_aggregates TO '/Users/pintoza/Desktop/dev/data-science/taxi-demand-forecast/data/interim/weekly_zone_aggregates.csv' DELIMITER ',' CSV HEADER;
+COPY weekly_zone_aggregates TO '../../data/interim/weekly_zone_aggregates.csv' DELIMITER ',' CSV HEADER;

@@ -16,14 +16,8 @@ def overlay_color_spectrum_on_video(video_path, overlay_image_path, output_video
 
 
 # Paths
-video_path = '/Users/pintoza/Desktop/dev/data-science/taxi-demand-forecast/reports/final_video.mp4'
-overlay_image_path = '/Users/pintoza/Desktop/dev/data-science/taxi-demand-forecast/reports/color_spectrum_transparent.png'
-output_video_path = '/Users/pintoza/Desktop/dev/data-science/taxi-demand-forecast/reports/final_video_with_spectrum.mp4'
+video_path = '../../reports/final_video.mp4'
+overlay_image_path = '../../reports/color_spectrum_transparent.png'
+output_video_path = '../../reports/final_video_with_spectrum.mp4'
 
 overlay_color_spectrum_on_video(video_path, overlay_image_path, output_video_path)
-
-
-
-
-
-

@@ -35,10 +35,10 @@ def create_video_from_images_with_cropping(images_dir, output_video_path, fps=4,
     cropped_clip.write_videofile(output_video_path)
 
 # Directory containing the images
-images_dir = '/Users/pintoza/Desktop/dev/data-science/taxi-demand-forecast/reports/maps_for_video'  # Update this path to where your images are stored
+images_dir = '../../reports/maps_for_video'  # Update this path to where your images are stored
 
 # Path where you want to save the video file
-output_video_path = '/Users/pintoza/Desktop/dev/data-science/taxi-demand-forecast/reports/final_video.mp4'  # Update this path to where you want to save your video
+output_video_path = '../../reports/final_video.mp4'  # Update this path to where you want to save your video
 
 # Create the video from images with cropping
 create_video_from_images_with_cropping(images_dir, output_video_path, fps=4, crop_left=100, crop_bottom=30,

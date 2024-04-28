@@ -1,10 +1,14 @@
 Commands
 ========
 
-The Makefile contains the central entry points for common tasks related to this project.
+This document lists the primary commands used in the NYC Taxi Zone Visualization project for managing data and generating visualizations.
 
-Syncing data to S3
-^^^^^^^^^^^^^^^^^^
+Data Processing Commands
+------------------------
 
-* `make sync_data_to_s3` will use `aws s3 sync` to recursively sync files in `data/` up to `s3://[OPTIONAL] your-bucket-for-syncing-data (do not include 's3://')/data/`.
-* `make sync_data_from_s3` will use `aws s3 sync` to recursively sync files from `s3://[OPTIONAL] your-bucket-for-syncing-data (do not include 's3://')/data/` to `data/`.
+* `make process_data` - Runs the Python scripts located in `src/data` to download, clean, and preprocess the raw taxi trip data into a usable format for analysis and visualization.
+
+Visualization Commands
+----------------------
+
+* `make visualize` - Executes the scripts in `src/visualization` to generate the dynamic maps and time-lapse video of taxi zone activity over time.

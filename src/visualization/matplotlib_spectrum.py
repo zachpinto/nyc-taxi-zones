@@ -18,7 +18,7 @@ def create_very_small_color_spectrum_image():
     plt.tight_layout()
 
     # Save with a transparent background
-    plt.savefig('/Users/pintoza/Desktop/dev/data-science/taxi-demand-forecast/reports/color_spectrum_transparent.png', dpi=300, bbox_inches='tight', transparent=True)
+    plt.savefig('../../reports/color_spectrum_transparent.png', dpi=300, bbox_inches='tight', transparent=True)
     plt.close()
 
 

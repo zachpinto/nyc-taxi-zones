@@ -1,108 +1,91 @@
-Title
-==============================
+# NYC Taxi Zones Visualization
 
-Demo: 
+## Overview
+This project visualizes the volume of taxi trips in New York City taxi zones by week from 2018 to 2022. 
 
-## Introduction
-- **Background**:
-    - Test
-- **Objectives**:
-    - Test
-- **Research Questions**:
-    - Test
+## Features
+- NYC Taxi Zones GeoJSON data via NYC Open Data for geographical data structures
+- NYC Taxi volume data via NYC Open Data's API.
+- Data processing and aggregation into a SQLite database.
+- Dynamic visualization through time-lapse video generation.
 
-## Data 
-- **Data Sources**:
-    - Test
-- **Data Attributes**:
-    - Test
+## Getting Started
+### Prerequisites
+- Python 3.8+
+- PostgreSQL
+- Libraries: Pandas, Folium, Selenium, MoviePy
 
-## Methodology
-- **Data Processing**:
-    - Test
-- **Geospatial Analysis**:
-    - Test
-- **Statistical Analysis**:
-    - Test
-- **User Interface**:
-    - Test
+### Installation
+Clone the repository and install dependencies:
 
-## Analysis
-- **Descriptive Analysis**:
-    - Test
-- **Proximity Analysis**:
-    - Test
-- **Correlation Analysis**:
-    - Test
+```bash
+git clone https://github.com/zachpinto/nyc-taxi-zones.git
+cd nyc-taxi-zones
+pip install -r requirements.txt
+```
 
-## Results
-- **Findings**:
-    - Test
-- **Visualizations**:
-    - Test
+## Usage
 
-## Discussion
-- **Interpretation**:
-    - Test
-- **Limitations**:
-    - Test
-- **Future Work**:
-    - Test
+### Data Collection
+Run the data collection scripts for each year:
+```bash
+python src/data/2018.py
+python src/data/2019.py
+python src/data/2020.py
+python src/data/2021.py
+python src/data/2022.py
+```
+### Data Processing
+Merge yearly data and aggregate it using the provided scripts:
+```bash
+python src/data/merge_data.py
+psql -d your_database -f src/data/aggregate.sql
+```
 
-## Appendix
-- **Technical Details**:
-    - Test
-- **References**:
-    - Test
+### Visualization
+Generate and capture the map visualizations, then compile them into a time-lapse video:
+```bash
+python src/visualization/visualize.py
+python src/visualization/maps_screenshots_test.py # OPTIONAL
+python src/visualization/maps_screenshots_selenium.py
+python src/visualization/maps_screenshot_finish.py
+python src/visualization/maps_merged_movie.py
+python src/visualization/edit_merged_video.py
+python src/visualization/matplotlib_spectrum.py
+python src/visualization/overlay_matplotlib_spectrum_on_mp4.py
+python src/visualization/year_week_overlays.py
+```
 
-Project Organization
-------------
+## License
+This project is licensed under the MIT License - see the LICENSE file for details.
 
-    ├── LICENSE
-    ├── Makefile           <- Makefile with commands like `make data` or `make train`
-    ├── README.md          <- The top-level README for developers using this project.
-    ├── data
-    │   ├── external       <- Data from third party sources.
-    │   ├── interim        <- Intermediate data that has been transformed.
-    │   ├── processed      <- The final, canonical data sets for modeling.
-    │   └── raw            <- The original, immutable data dump.
-    │
-    ├── docs               <- A default Sphinx project; see sphinx-doc.org for details
-    │
-    ├── models             <- Trained and serialized models, model predictions, or model summaries
-    │
-    ├── notebooks          <- Jupyter notebooks. Naming convention is a number (for ordering),
-    │                         the creator's initials, and a short `-` delimited description, e.g.
-    │                         `1.0-jqp-initial-data-exploration`.
-    │
-    ├── references         <- Data dictionaries, manuals, and all other explanatory materials.
-    │
-    ├── reports            <- Generated analysis as HTML, PDF, LaTeX, etc.
-    │   └── figures        <- Generated graphics and figures to be used in reporting
-    │
-    ├── requirements.txt   <- The requirements file for reproducing the analysis environment, e.g.
-    │                         generated with `pip freeze > requirements.txt`
-    │
-    ├── setup.py           <- makes project pip installable (pip install -e .) so src can be imported
-    ├── src                <- Source code for use in this project.
-    │   ├── __init__.py    <- Makes src a Python module
-    │   │
-    │   ├── data           <- Scripts to download or generate data
-    │   │   └── make_dataset.py
-    │   │
-    │   ├── features       <- Scripts to turn raw data into features for modeling
-    │   │   └── build_features.py
-    │   │
-    │   ├── models         <- Scripts to train models and then use trained models to make
-    │   │   │                 predictions
-    │   │   ├── predict_model.py
-    │   │   └── train_model.py
-    │   │
-    │   └── visualization  <- Scripts to create exploratory and results oriented visualizations
-    │       └── visualize.py
-    │
-    └── tox.ini            <- tox file with settings for running tox; see tox.readthedocs.io
+## Acknowledgments
+- NYC Open Data for providing the taxi trip and GeoJSON data.
 
+## Directory Structure
 
---------
+```plaintext
+nyc-taxi-zones/
+│
+├── data/
+│   ├── external/       # GeoJSON files and external datasets
+│   ├── interim/        # Intermediate data processing files
+│   ├── processed/      # Processed data ready for visualization
+│   └── raw/           # Raw data from NYC Open Data API
+├── docs/               # Documentation files and project notes
+├── reports/            # Generated analysis as HTML, PDF, LaTeX, etc.
+│   └── figures/        # Generated graphics and figures to be used in reporting
+├── src/                # Source code for use in this project
+│   ├── __init__.py     # Makes src a Python module
+│   ├── data/           # Scripts to download or generate data
+│   ├── features/       # Scripts to turn raw data into features for modeling
+│   ├── models/         # Scripts to train models and then use trained models to make predictions
+│   └── visualization/  # Scripts to create exploratory and results oriented visualizations
+├── LICENSE             # The full license description
+├── Makefile            # Makefile with commands like `make data` or `make train`
+├── README.md           # The top-level README for developers using this project
+├── requirements.txt    # The requirements file for reproducing the analysis environment
+├── setup.py            # Makes project pip installable (pip install -e .) so src can be imported
+├── test_environment.py # Test python environment is set-up correctly
+└── tox.ini             # tox file with settings for running tox; see tox.readthedocs.io
 

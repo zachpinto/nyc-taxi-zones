@@ -35,8 +35,8 @@ def generate_missing_screenshots(html_dir, png_dir, start_year, end_year):
     print("Finished regenerating missing screenshots.")
 
 # Paths to your directories
-html_dir = '/Users/pintoza/Desktop/dev/data-science/taxi-demand-forecast/reports/maps'
-png_dir = '/Users/pintoza/Desktop/dev/data-science/taxi-demand-forecast/reports/maps_merged'
+html_dir = '../../reports/maps'
+png_dir = '../../reports/maps_merged'
 
 # Define the range of years you're working with
 start_year = 2018

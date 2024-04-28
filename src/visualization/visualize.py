@@ -4,7 +4,7 @@ import os
 import json
 
 # Load weekly data
-weekly_data = pd.read_csv('/Users/pintoza/Desktop/dev/data-science/taxi-demand-forecast/data/processed/weekly_zone_aggregates.csv')
+weekly_data = pd.read_csv('../../data/processed/weekly_zone_aggregates.csv')
 weekly_data['PULocationID'] = weekly_data['PULocationID'].astype(str)  # Convert PULocationID to string for matching
 
 # Create 'year_week' column combining 'year' and 'week'
@@ -12,7 +12,7 @@ weekly_data['year_week'] = weekly_data['year'].astype(str) + '-' + weekly_data['
 weekly_data.sort_values(by='year_week', inplace=True)  # Sort the DataFrame by 'year_week'
 
 # Load GeoJSON data
-with open('/Users/pintoza/Desktop/dev/data-science/taxi-demand-forecast/data/external/NYC_Taxi_Zones.geojson') as f:
+with open('../../data/external/NYC_Taxi_Zones.geojson') as f:
     geojson_data = json.load(f)
 
 def get_color(passenger_count):
@@ -31,7 +31,7 @@ def get_color(passenger_count):
     else:
         return '#ffffff'
 
-maps_dir = '/Users/pintoza/Desktop/dev/data-science/taxi-demand-forecast/reports/maps/'
+maps_dir = '../../reports/maps/'
 os.makedirs(maps_dir, exist_ok=True)
 
 for year_week in weekly_data['year_week'].unique():

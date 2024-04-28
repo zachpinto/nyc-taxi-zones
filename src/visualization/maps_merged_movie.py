@@ -25,9 +25,9 @@ def create_video_from_images(images_dir, output_video_path, fps=5):
 
 
 # Set directories and target size
-input_dir = '/Users/pintoza/Desktop/dev/data-science/taxi-demand-forecast/reports/maps_merged'
-output_dir = '/Users/pintoza/Desktop/dev/data-science/taxi-demand-forecast/reports/maps_for_video'
-output_video_path = '/Users/pintoza/Desktop/dev/data-science/taxi-demand-forecast/reports/taxi_zone_changes_over_time.mp4'
+input_dir = '../../reports/maps_merged'
+output_dir = '../../reports/maps_for_video'
+output_video_path = '../../reports/taxi_zone_changes_over_time.mp4'
 
 # Resize images
 resize_images_to_uniform_size(input_dir, output_dir, target_size=(1920, 1080))

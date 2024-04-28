@@ -13,3 +13,7 @@ requests~=2.31.0
 pandas~=2.1.4
 sqlalchemy~=2.0.25
 setuptools~=68.2.2
+folium~=0.14.0
+moviepy~=1.0.3
+pillow~=10.0.1
+selenium~=3.141.0

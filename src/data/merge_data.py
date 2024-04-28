@@ -17,11 +17,11 @@ db_name = os.getenv('DB_NAME')
 engine = create_engine(f'postgresql://{db_username}:{db_password}@{db_host}:{db_port}/{db_name}')
 
 # List of CSV file paths
-csv_files = ['/Users/pintoza/Desktop/dev/data-science/nyc-taxi-zones/data/raw/2018.csv',
-             '/Users/pintoza/Desktop/dev/data-science/nyc-taxi-zones/data/raw/2019.csv',
-             '/Users/pintoza/Desktop/dev/data-science/nyc-taxi-zones/data/raw/2020.csv',
-             '/Users/pintoza/Desktop/dev/data-science/nyc-taxi-zones/data/raw/2021.csv',
-             '/Users/pintoza/Desktop/dev/data-science/nyc-taxi-zones/data/raw/2022.csv']
+csv_files = ['../../data/raw/2018.csv',
+             '../../data/raw/2019.csv',
+             '../../data/raw/2020.csv',
+             '../../data/raw/2021.csv',
+             '../../data/raw/2022.csv']
 
 # Loop through each CSV file and append the data to the database, by chunk
 chunk_size = 10000  # You can adjust this size

@@ -34,7 +34,7 @@ def add_year_week_to_video(input_video_path, output_video_path, fps=1):
     final_clip = CompositeVideoClip(clips, size=video_clip.size)
     final_clip.write_videofile(output_video_path, codec="libx264")
 
-input_video_path = '/Users/pintoza/Desktop/dev/data-science/taxi-demand-forecast/reports/final_video_with_spectrum.mp4'
-output_video_path = '/Users/pintoza/Desktop/dev/data-science/taxi-demand-forecast/reports/final_video_with_spectrum_and_yearweek_overlays.mp4'
+input_video_path = '../../reports/final_video_with_spectrum.mp4'
+output_video_path = '../../reports/final_video_with_spectrum_and_yearweek_overlays.mp4'
 
 add_year_week_to_video(input_video_path, output_video_path, fps=4)

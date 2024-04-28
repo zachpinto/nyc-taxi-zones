@@ -10,8 +10,8 @@ options = Options()
 options.headless = True  # Run in headless mode
 driver = webdriver.Chrome(options=options)
 
-maps_dir = '/Users/pintoza/Desktop/dev/data-science/taxi-demand-forecast/reports/maps'  # Update this path
-output_dir = '/Users/pintoza/Desktop/dev/data-science/taxi-demand-forecast/reports/maps_merged'  # Update this path
+maps_dir = '../../reports/maps'  # Update this path
+output_dir = '../../reports/maps_merged'  # Update this path
 os.makedirs(output_dir, exist_ok=True)
 
 for filename in os.listdir(maps_dir):

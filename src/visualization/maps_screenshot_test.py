@@ -10,8 +10,8 @@ options.headless = True  # Run in headless mode
 driver = webdriver.Chrome(options=options)
 
 # Path to your HTML file
-html_file_path = '/Users/pintoza/Desktop/dev/data-science/taxi-demand-forecast/reports/maps/week_2018-1.html'
-output_screenshot_path = '/reports/maps_merged/week_2018-1.png'
+html_file_path = '../../reports/maps/week_2018-1.html'
+output_screenshot_path = '../../reports/maps_merged/week_2018-1.png'
 
 # Use the file:// protocol to open local HTML files
 file_url = f'file:///{html_file_path}'
